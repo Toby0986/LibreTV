@@ -203,4 +203,4 @@ LibreTV 仅作为视频搜索工具，不存储、上传或分发任何视频内
 
 如果您想支持本项目，可以考虑进行捐款：
 
-[![捐赠](https://img.shields.io/badge/爱心捐赠-无国界医生-1a85ff?style=for-the-badge&logo=medical-cross)](https://www.worldvision.org.tw/)
+[![捐赠](https://img.shields.io/badge/%E6%84%9B%E5%BF%83%E6%8D%90%E8%B4%88-%E5%8F%B0%E7%81%A3%E4%B8%96%E7%95%8C%E5%B1%95%E6%9C%9B%E6%9C%83worldvision-red)](https://www.worldvision.org.tw/)
