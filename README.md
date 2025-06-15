@@ -1,44 +1,44 @@
-# LibreTV - 免费在线视频搜索与观看平台
+# LibreTV - 免費線上影片搜尋與觀看平台
 
 <div align="center">
   <img src="image/logo.png" alt="LibreTV Logo" width="120">
   <br>
-  <p><strong>自由观影，畅享精彩</strong></p>
+  <p><strong>自由觀影，享受精彩</strong></p>
 </div>
 
-## 📺 项目简介
+## 📺 專案簡介
 
-LibreTV 是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目结合了前端技术和后端代理功能，可部署在支持服务端功能的各类网站托管服务上。
+LibreTV 是一個輕量級、免費的線上影片搜尋與觀看平台，提供來自多個影片來源的內容搜尋與播放服務。無需註冊，即開即用，支援多種裝置存取。專案結合了前端技術和後端代理功能，可部署在支援服務端功能的各類網站託管服務上。
 
-本项目基于 [bestK/tv](https://github.com/bestK/tv) 进行重构与增强。
+本項目基於 [bestK/tv](https://github.com/bestK/tv) 進行重構與增強。
 
 <details>
-  <summary>点击查看项目截图</summary>
-  <img src="https://github.com/user-attachments/assets/df485345-e83b-4564-adf7-0680be92d3c7" alt="项目截图" style="max-width:600px">
+  <summary>點擊查看專案截圖</summary>
+  <img src="https://github.com/user-attachments/assets/df485345-e83b-4564-adf7-0680be92d3c7" alt="專案截圖" style="max-width:600px">
 </details>
 
-## 🥇 感谢赞助
+## 🥇 感謝贊助
 
 - **[YXVM](https://yxvm.com)**  
 - **[ZMTO/VTEXS](https://zmto.com)**
 
 ## 🚀 快速部署
 
-选择以下任一平台，点击一键部署按钮，即可快速创建自己的 LibreTV 实例：
+選擇以下任一平台，點選一鍵部署按鈕，即可快速建立自己的 LibreTV 實例：
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLibreSpark%2FLibreTV)  
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LibreSpark/LibreTV)  
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/LibreSpark/LibreTV) 
 
-## ⚠️ 安全与隐私提醒
+## ⚠️ 安全與隱私提醒
 
-### 🔒 强烈建议设置密码保护
+### 🔒 強烈建議設定密碼保護
 
-为了您的安全和避免潜在的法律风险，我们**强烈建议**在部署时设置密码保护：
+為了您的安全和避免潛在的法律風險，我們**強烈建議**在部署時設定密碼保護：
 
-- **避免公开访问**：不设置密码的实例任何人都可以访问，可能被恶意利用
-- **防范版权风险**：公开的视频搜索服务可能面临版权方的投诉举报
-- **保护个人隐私**：设置密码可以限制访问范围，保护您的使用记录
+- **避免公開訪問**：不設定密碼的實例任何人都可以訪問，可能被惡意利用
+- **防範版權風險**：公開的影片搜尋服務可能面臨版權方的投訴舉報
+- **保護個人隱私**：設定密碼可以限制存取範圍，保護您的使用記錄
 
 ### 📝 部署建議
 
