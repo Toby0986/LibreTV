@@ -139,68 +139,68 @@ npm run dev
 
 访问 `http://localhost:8080` 即可使用（端口可在.env文件中通过PORT变量修改）。
 
-> ⚠️ 注意：使用简单静态服务器（如 `python -m http.server` 或 `npx http-server`）时，视频代理功能将不可用，视频无法正常播放。完整功能测试请使用 Node.js 开发服务器。
+> ⚠️ 注意：使用簡單靜態伺服器（如 `python -m http.server` 或 `npx http-server`）時，視訊代理功能將不可用，影片無法正常播放。完整功能測試請使用 Node.js 開發伺服器。
+> 
+## 🔧 自訂配置
 
-## 🔧 自定义配置
+### 密碼保護
 
-### 密码保护
+若要為您的 LibreTV 執行個體新增密碼保護，可以在部署平台上設定環境變數：
 
-要为您的 LibreTV 实例添加密码保护，可以在部署平台上设置环境变量：
+**環境變數名**: `PASSWORD` 
+**值**: 您想設定的密碼
 
-**环境变量名**: `PASSWORD` 
-**值**: 您想设置的密码
+**環境變數名**: `ADMINPASSWORD` 
+**值**: 您想設定的密碼
 
-**环境变量名**: `ADMINPASSWORD` 
-**值**: 您想设置的密码
+各平台設定方式：
 
-各平台设置方法：
+- **Cloudflare Pages**: Dashboard > 您的專案 > 設定 > 環境變數
+- **Vercel**: Dashboard > 您的專案 > Settings > Environment Variables
+- **Netlify**: Dashboard > 您的專案 > Site settings > Build & deploy > Environment
+- **Docker**: 修改 `docker run` 中 `your_password` 為你的密碼
+- **Docker Compose**: 修改 `docker-compose.yml` 中的 `your_password` 為你的密碼
+- **本地開發**: SET PASSWORD=your_password
 
-- **Cloudflare Pages**: Dashboard > 您的项目 > 设置 > 环境变量
-- **Vercel**: Dashboard > 您的项目 > Settings > Environment Variables
-- **Netlify**: Dashboard > 您的项目 > Site settings > Build & deploy > Environment
-- **Docker**: 修改 `docker run` 中 `your_password` 为你的密码
-- **Docker Compose**: 修改 `docker-compose.yml` 中的 `your_password` 为你的密码
-- **本地开发**: SET PASSWORD=your_password
+### API相容性
 
-### API兼容性
-
-LibreTV 支持标准的苹果 CMS V10 API 格式。添加自定义 API 时需遵循以下格式：
-- 搜索接口: `https://example.com/api.php/provide/vod/?ac=videolist&wd=关键词`
-- 详情接口: `https://example.com/api.php/provide/vod/?ac=detail&ids=视频ID`
+LibreTV 支援標準的蘋果 CMS V10 API 格式。新增自訂 API 時需遵循以下格式：
+- 搜尋介面: `https://example.com/api.php/provide/vod/?ac=videolist&wd=關鍵字`
+- 詳情介面: `https://example.com/api.php/provide/vod/?ac=detail&ids=視訊ID`
 
 **添加 CMS 源**:
-1. 在设置面板中选择"自定义接口"
+1. 在設定面板中選擇"自訂介面"
 2. 接口地址: `https://example.com/api.php/provide/vod`
 
-## ⌨️ 键盘快捷键
+## ⌨️ 鍵盤快速鍵
 
-播放器支持以下键盘快捷键：
+播放器支援以下鍵盤快捷鍵：
 
-- **空格键**: 播放/暂停
-- **左右箭头**: 快退/快进
-- **上下箭头**: 音量增加/减小
-- **M 键**: 静音/取消静音
-- **F 键**: 全屏/退出全屏
-- **Esc 键**: 退出全屏
+- **空格键**: 播放/暫停
+- **左右箭头**: 快退/快轉
+- **上下箭头**: 音量增加/減小
+- **M 键**: 靜音/取消靜音
+- **F 键**: 全螢幕/退出全螢幕
+- **Esc 键**: 退出全螢幕
 
-## 🛠️ 技术栈
+## 🛠️ 技術堆疊
 
 - HTML5 + CSS3 + JavaScript (ES6+)
 - Tailwind CSS
-- HLS.js 用于 HLS 流处理
-- DPlayer 视频播放器核心
+- HLS.js 用于 HLS 架構
+- DPlayer 影片播放器核心
 - Cloudflare/Vercel/Netlify Serverless Functions
-- 服务端 HLS 代理和处理技术
-- localStorage 本地存储
+- 服务端 HLS 代理和處理技術
+- localStorage 本地儲存
 
-## ⚠️ 免责声明
+## ⚠️ 免責聲明
 
-LibreTV 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方 API 接口提供的搜索结果。如有侵权内容，请联系相应的内容提供方。
+LibreTV 僅作為影片搜尋工具，不儲存、上傳或散佈任何影片內容。所有影片均來自第三方 API 介面提供的搜尋結果。如有侵權內容，請聯絡對應的內容提供者。
 
-本项目开发者不对使用本项目产生的任何后果负责。使用本项目时，您必须遵守当地的法律法规。
+本專案開發者不對使用本專案產生的任何後果負責。使用本項目時，您必須遵守當地的法律法規。
 
-## 💝 支持项目
+## 💝 支援專案
 
-如果您想支持本项目，可以考虑进行捐款：
+如果您想支持本專案，可以考慮進行捐款：
 
 [![捐赠](https://img.shields.io/badge/%E6%84%9B%E5%BF%83%E6%8D%90%E8%B4%88-%E5%8F%B0%E7%81%A3%E4%B8%96%E7%95%8C%E5%B1%95%E6%9C%9B%E6%9C%83worldvision-red)](https://www.worldvision.org.tw/)
