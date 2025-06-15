@@ -40,51 +40,51 @@ LibreTV 是一个轻量级、免费的在线视频搜索与观看平台，提供
 - **防范版权风险**：公开的视频搜索服务可能面临版权方的投诉举报
 - **保护个人隐私**：设置密码可以限制访问范围，保护您的使用记录
 
-### 📝 部署建议
+### 📝 部署建議
 
-1. **设置环境变量 `PASSWORD`**：为您的实例设置一个强密码
-2. **仅供个人使用**：请勿将您的实例链接公开分享或传播
-3. **遵守当地法律**：请确保您的使用行为符合当地法律法规
+1. **設定環境變數 `PASSWORD`**：為您的實例設定一個強密碼
+2. **僅供個人使用**：請勿將您的實例連結公開分享或傳播
+3. **遵守當地法律**：請確保您的使用行為符合當地法律法規
 
-### 🚨 重要声明
+### 🚨 重要聲明
 
-- 本项目仅供学习和个人使用
-- 请勿将部署的实例用于商业用途或公开服务
-- 如因公开分享导致的任何法律问题，用户需自行承担责任
-- 项目开发者不对用户的使用行为承担任何法律责任
+- 本項目僅供學習和個人使用
+- 請勿將部署的執行個體用於商業用途或公開服務
+- 如因公開分享而導致的任何法律問題，用戶需自行承擔責任
+- 專案開發者不對使用者的使用行為承擔任何法律責任
 
-## ⚠️ 请勿使用 Pull Bot 自动同步
+## ⚠️ 請勿使用 Pull Bot 自動同步
 
-Pull Bot 会反复触发无效的 PR 和垃圾邮件，严重干扰项目维护。作者可能会直接拉黑所有 Pull Bot 自动发起的同步请求的仓库所有者。
+Pull Bot 會重複觸發無效的 PR 和垃圾郵件，嚴重干擾專案維護。作者可能會直接拉黑所有 Pull Bot 自動發起的同步請求的倉庫所有者。
 
-**推荐做法：**
+**推薦做法：**
 
-建议在 fork 的仓库中启用本仓库自带的 GitHub Actions 自动同步功能（见 `.github/workflows/sync.yml`）。 
+建議在 fork 的倉庫中啟用本倉庫自帶的 GitHub Actions 自動同步功能（請參閱 `.github/workflows/sync.yml`）。 
 
-如需手动同步主仓库更新，也可以使用 GitHub 官方的 [Sync fork](https://docs.github.com/cn/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) 功能。
+如需手動同步主倉庫更新，也可以使用 GitHub 官方的 [Sync fork](https://docs.github.com/cn/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) 功能。
 
 
-## 📋 详细部署指南
+## 📋 詳細部署指南
 
 ### Cloudflare Pages
 
-1. Fork 或克隆本仓库到您的 GitHub 账户
-2. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)，进入 Pages 服务
-3. 点击"创建项目"，连接您的 GitHub 仓库
-4. 使用以下设置：
-   - 构建命令：留空（无需构建）
-   - 输出目录：留空（默认为根目录）
-5. **⚠️ 重要：在"设置" > "环境变量"中添加 `PASSWORD` 变量**
-6. **可选：在"Settings" > "Environment Variables"中添加 `ADMINPASSWORD` 变量**
-7. 点击"保存并部署"
+1. Fork 或複製本倉庫到您的 GitHub 帳戶
+2. 登錄 [Cloudflare Dashboard](https://dash.cloudflare.com/)，進入 Pages 服務
+3. 點擊"建立專案"，連接您的 GitHub 倉庫
+4. 使用以下設定：
+   - 建置命令：留空（無需建置）
+   - 輸出目錄：留空（預設為根目錄）
+5. **⚠️ 重要：在"設定" > "環境變量"中添加 `PASSWORD` 變量**
+6. **可選：在"Settings" > "Environment Variables"中添加 `ADMINPASSWORD` 變量**
+7. 點擊"儲存並部署"
 
 ### Vercel
 
-1. Fork 或克隆本仓库到您的 GitHub/GitLab 账户
-2. 登录 [Vercel](https://vercel.com/)，点击"New Project"
-3. 导入您的仓库，使用默认设置
-4. **⚠️ 重要：在"Settings" > "Environment Variables"中添加 `PASSWORD` 变量**
-5. **可选：在"Settings" > "Environment Variables"中添加 `ADMINPASSWORD` 变量**
+1. Fork 或複製本倉庫到您的 GitHub/GitLab 帳戶
+2. 登錄 [Vercel](https://vercel.com/)，點擊"New Project"
+3. 導入您的倉庫，使用預設設定
+4. **⚠️ 重要：在"Settings" > "Environment Variables"中添加 `PASSWORD` 變量**
+5. **可選：在"Settings" > "Environment Variables"中添加 `ADMINPASSWORD` 變量**
 6. 点击"Deploy"
 7. 可选：在"Settings" > "Environment Variables"中配置密码保护和设置按钮密码保护
 
@@ -109,35 +109,35 @@ services:
     image: bestzwei/libretv:latest
     container_name: libretv
     ports:
-      - "8899:8080" # 将内部 8080 端口映射到主机的 8899 端口
+      - "8899:8080" # 將內部 8080 端口映射到主機的 8899 端口
     environment:
-      - PASSWORD=${PASSWORD:-your_password} # 可将 your_password 修改为你想要的密码，默认为 your_password
-      - ADMINPASSWORD=${PASSWORD:-your_adminpassword} # 可将 your_adminpassword 修改为你想要的密码，默认为 your_adminpassword
+      - PASSWORD=${PASSWORD:-your_password} # 可將 your_password 修改為你想要的密碼，預設為 your_password
+      - ADMINPASSWORD=${PASSWORD:-your_adminpassword} # 可將 your_adminpassword 修改為你想要的密碼，預設為 your_adminpassword
     restart: unless-stopped
 ```
-启动 LibreTV：
+啟動 LibreTV：
 
 ```bash
 docker compose up -d
 ```
-访问 `http://localhost:8899` 即可使用。
+造訪 `http://localhost:8899` 即可使用。
 
-### 本地开发环境
+### 本地開發環境
 
-项目包含后端代理功能，需要支持服务器端功能的环境：
+專案包含後端代理功能，需要支援伺服器端功能的環境：
 
 ```bash
-# 首先，通过复制示例来设置 .env 文件（可选）
+# 首先，透過複製範例來設定 .env 檔案（可選）
 cp .env.example .env
 
-# 安装依赖
+# 安裝依賴
 npm install
 
-# 启动开发服务器
+# 啟動開發伺服器
 npm run dev
 ```
 
-访问 `http://localhost:8080` 即可使用（端口可在.env文件中通过PORT变量修改）。
+造訪 `http://localhost:8080` 即可使用（連接埠可在.env檔案中透過PORT變數修改）。
 
 > ⚠️ 注意：使用簡單靜態伺服器（如 `python -m http.server` 或 `npx http-server`）時，視訊代理功能將不可用，影片無法正常播放。完整功能測試請使用 Node.js 開發伺服器。
 > 
@@ -168,7 +168,7 @@ LibreTV 支援標準的蘋果 CMS V10 API 格式。新增自訂 API 時需遵循
 - 搜尋介面: `https://example.com/api.php/provide/vod/?ac=videolist&wd=關鍵字`
 - 詳情介面: `https://example.com/api.php/provide/vod/?ac=detail&ids=視訊ID`
 
-**添加 CMS 源**:
+**新增 CMS 來源**:
 1. 在設定面板中選擇"自訂介面"
 2. 接口地址: `https://example.com/api.php/provide/vod`
 
@@ -190,7 +190,7 @@ LibreTV 支援標準的蘋果 CMS V10 API 格式。新增自訂 API 時需遵循
 - HLS.js 用于 HLS 架構
 - DPlayer 影片播放器核心
 - Cloudflare/Vercel/Netlify Serverless Functions
-- 服务端 HLS 代理和處理技術
+- 服務端 HLS 代理和處理技術
 - localStorage 本地儲存
 
 ## ⚠️ 免責聲明
