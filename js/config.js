@@ -15,7 +15,7 @@ const PASSWORD_CONFIG = {
 const SITE_CONFIG = {
     name: 'LibreTV',
     url: 'https://libretv.is-an.org',
-    description: '免费在线视频搜索与观看平台',
+    description: '免費線上影片搜尋與觀看平台',
     logo: 'image/logo.png',
     version: '1.0.3'
 };
@@ -24,28 +24,28 @@ const SITE_CONFIG = {
 const API_SITES = {
     dyttzy: {
         api: 'http://caiji.dyttzyapi.com/api.php/provide/vod',
-        name: '电影天堂资源',
+        name: '電影天堂資源',
         detail: 'http://caiji.dyttzyapi.com', 
     },
     ruyi: {
         api: 'https://cj.rycjapi.com/api.php/provide/vod',
-        name: '如意资源',
+        name: '如意資源',
     },
     bfzy: {
         api: 'https://bfzyapi.com/api.php/provide/vod',
-        name: '暴风资源',
+        name: '暴風資源',
     },
     tyyszy: {
         api: 'https://tyyszy.com/api.php/provide/vod',
-        name: '天涯资源',
+        name: '天涯資源',
     },
     // xiaomaomi: {
     //     api: 'https://zy.xiaomaomi.cc/api.php/provide/vod',
-    //     name: '小猫咪资源',
+    //     name: '小貓咪資源',
     // },
     ffzy: {
         api: 'http://ffzy5.tv/api.php/provide/vod',
-        name: '非凡影视',
+        name: '非凡影視',
         detail: 'http://ffzy5.tv', 
     },
     heimuer: {
@@ -55,64 +55,64 @@ const API_SITES = {
     },
     zy360: {
         api: 'https://360zy.com/api.php/provide/vod',
-        name: '360资源',
+        name: '360資源',
     },
     iqiyi: {
         api: 'https://www.iqiyizyapi.com/api.php/provide/vod',
-        name: 'iqiyi资源',
+        name: 'iqiyi資源',
     },
     wolong: {
         api: 'https://wolongzyw.com/api.php/provide/vod',
-        name: '卧龙资源',
+        name: '臥龍資源',
     }, 
     hwba: {
         api: 'https://cjhwba.com/api.php/provide/vod',
-        name: '华为吧资源',
+        name: '華為吧資源',
     },
     jisu: {
         api: 'https://jszyapi.com/api.php/provide/vod',
-        name: '极速资源',
+        name: '極速資源',
         detail: 'https://jszyapi.com', 
     },
     dbzy: {
         api: 'https://dbzy.tv/api.php/provide/vod',
-        name: '豆瓣资源',
+        name: '豆瓣資源',
     },
     mozhua: {
         api: 'https://mozhuazy.com/api.php/provide/vod',
-        name: '魔爪资源',
+        name: '魔爪資源',
     },
     mdzy: {
         api: 'https://www.mdzyapi.com/api.php/provide/vod',
-        name: '魔都资源',
+        name: '魔都資源',
     },
     zuid: {
         api: 'https://api.zuidapi.com/api.php/provide/vod',
-        name: '最大资源'
+        name: '最大資源'
     },
     yinghua: {
         api: 'https://m3u8.apiyhzy.com/api.php/provide/vod',
-        name: '樱花资源'
+        name: '櫻花資源'
     },
     baidu: {
         api: 'https://api.apibdzy.com/api.php/provide/vod',
-        name: '百度云资源'
+        name: '百度雲端資源'
     },
     wujin: {
         api: 'https://api.wujinapi.me/api.php/provide/vod',
-        name: '无尽资源'
+        name: '無盡資源'
     },
     wwzy: {
         api: 'https://wwzy.tv/api.php/provide/vod',
-        name: '旺旺短剧'
+        name: '旺旺短劇'
     },
     ikun: {
         api: 'https://ikunzyapi.com/api.php/provide/vod',
-        name: 'iKun资源'
+        name: 'iKun資源'
     },
     testSource: {
         api: 'https://www.example.com/api.php/provide/vod',
-        name: '空内容测试源',
+        name: '空內容測試來源',
         adult: true
     },
     // 下面是一些成人内容的API源，默认隐藏，使用本项目浏览黄色内容违背项目初衷
@@ -125,58 +125,58 @@ const API_SITES = {
     // 我们提供此警告，是希望您能认清这些内容的本质——它们是压迫和奴役的工具，而非娱乐。
     // ckzy: {
     //     api: 'https://www.ckzy1.com',
-    //     name: 'CK资源',
+    //     name: 'CK資源',
     //     adult: true
     // },
     // jkun: {
     //     api: 'https://jkunzyapi.com',
-    //     name: 'jkun资源',
+    //     name: 'jkun資源',
     //     adult: true
     // },
     // bwzy: {
     //     api: 'https://api.bwzym3u8.com',
-    //     name: '百万资源',
+    //     name: '百萬資源',
     //     adult: true
     // },
     // souav: {
     //     api: 'https://api.souavzy.vip',
-    //     name: 'souav资源',
+    //     name: 'souav資源',
     //     adult: true
     // },
     // r155: {
     //     api: 'https://155api.com',
-    //     name: '155资源',
+    //     name: '155資源',
     //     adult: true
     // },
     // lsb: {
     //     api: 'https://apilsbzy1.com',
-    //     name: 'lsb资源',
+    //     name: 'lsb資源',
     //     adult: true
     // },
     // huangcang: {
     //     api: 'https://hsckzy.vip',
-    //     name: '黄色仓库',
+    //     name: '黃色倉庫',
     //     adult: true,
     //     detail: 'https://hsckzy.vip'
     // },
     // yutu: {
     //     api: 'https://yutuzy10.com',
-    //     name: '玉兔资源',
+    //     name: '玉兔資源',
     //     adult: true
     // },
 
     // 下面是资源失效率高的API源，不建议使用
     // subo: {
     //     api: 'https://subocaiji.com/api.php/provide/vod',
-    //     name: '速播资源'
+    //     name: '速播資源'
     // },
     // fczy: {
     //     api: 'https://api.fczy888.me/api.php/provide/vod',
-    //     name: '蜂巢资源'
+    //     name: '蜂巢資源'
     // },
     // ukzy: {
     //     api: 'https://api.ukuapi88.com/api.php/provide/vod',
-    //     name: 'U酷资源'
+    //     name: 'U酷資源'
     // },
 };
 
@@ -232,11 +232,11 @@ const PLAYER_CONFIG = {
 
 // 增加错误信息本地化
 const ERROR_MESSAGES = {
-    NETWORK_ERROR: '网络连接错误，请检查网络设置',
-    TIMEOUT_ERROR: '请求超时，服务器响应时间过长',
-    API_ERROR: 'API接口返回错误，请尝试更换数据源',
-    PLAYER_ERROR: '播放器加载失败，请尝试其他视频源',
-    UNKNOWN_ERROR: '发生未知错误，请刷新页面重试'
+    NETWORK_ERROR: '網路連線錯誤，請檢查網路設定',
+    TIMEOUT_ERROR: '請求超時，伺服器回應時間過長',
+    API_ERROR: 'API介面回傳錯誤，請嘗試更換資料來源',
+    PLAYER_ERROR: '播放器載入失敗，請嘗試其他影片來源',
+    UNKNOWN_ERROR: '發生未知錯誤，請重新整理頁面重試'
 };
 
 // 添加进一步安全设置
